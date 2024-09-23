@@ -8,16 +8,13 @@ import posts from "json/posts.json";
 export default function SobreMin() {
   return (
     <AnimatedPage>
-      <main>
-        <Banner></Banner>
-        <ul className={styles.posts}>
-          {posts.map((post) => (
-            <li key={post.id}>
-              <Post post={post} />
-            </li>
-          ))}
-        </ul>
-      </main>
+      <ul className={styles.posts}>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Post post={post} />
+          </li>
+        ))}
+      </ul>
     </AnimatedPage>
   );
 }
