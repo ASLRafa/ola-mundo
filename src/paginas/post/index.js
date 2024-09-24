@@ -21,12 +21,12 @@ export default function Post() {
     return <NaoEncontrada></NaoEncontrada>;
   }
   return (
-    <AnimatedPagePost>
-      <Routes>
-        <Route path="*" element={<PaginaPadrao />}>
-          <Route
-            index
-            element={
+    <Routes>
+      <Route path="*" element={<PaginaPadrao />}>
+        <Route
+          index
+          element={
+            <AnimatedPagePost>
               <div>
                 <PostModelo
                   fotoCapa={`/assets/posts/${post.id}/capa.png`}
@@ -47,10 +47,10 @@ export default function Post() {
                   </div>
                 </PostModelo>
               </div>
-            }
-          ></Route>
-        </Route>
-      </Routes>
-    </AnimatedPagePost>
+            </AnimatedPagePost>
+          }
+        ></Route>
+      </Route>
+    </Routes>
   );
 }

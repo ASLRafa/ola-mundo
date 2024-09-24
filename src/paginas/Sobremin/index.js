@@ -2,7 +2,7 @@ import AnimatedPage from "componentes/Animated/animatedPage";
 import PostModelo from "componentes/PostModelo";
 import fotoCapa from "assets/sobre_mim_capa.png";
 import styles from "./SobreMin.module.css";
-import fotoSobreMin from "assets/sobre_mim_foto.png";
+import fotoSobreMin from "assets/sobre_mim_foto.jpg";
 
 export default function SobreMin() {
   return (
