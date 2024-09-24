@@ -3,6 +3,7 @@ import posts from "json/posts.json";
 import PostModelo from "componentes/PostModelo";
 import ReactMarkdown from "react-markdown";
 import "./post.css";
+import { AnimatedPagePost } from "componentes/Animated/animatedPage";
 
 export default function Post() {
   const parametros = useParams();
@@ -13,13 +14,15 @@ export default function Post() {
     return <h1>Post não encontrado...</h1>;
   }
   return (
-    <PostModelo
-      fotoCapa={`/assets/posts/${post.id}/capa.png`}
-      titulo={post.titulo}
-    >
-      <div className="post-markdown-container">
-        <ReactMarkdown>{post.texto}</ReactMarkdown>
-      </div>
-    </PostModelo>
+    <AnimatedPagePost>
+      <PostModelo
+        fotoCapa={`/assets/posts/${post.id}/capa.png`}
+        titulo={post.titulo}
+      >
+        <div className="post-markdown-container">
+          <ReactMarkdown>{post.texto}</ReactMarkdown>
+        </div>
+      </PostModelo>
+    </AnimatedPagePost>
   );
 }
