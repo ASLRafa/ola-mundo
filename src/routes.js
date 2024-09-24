@@ -16,7 +16,7 @@ function AppRoutes() {
           <Route index element={<Inicio />} />
           <Route path="sobremin" element={<SobreMin />} />
         </Route>
-        <Route path="posts/:id" element={<Post />} />
+        <Route path="posts/:id/*" element={<Post />} />
         <Route path="*" element={<NaoEncontrada></NaoEncontrada>} />
       </Routes>
       <Rodape />
